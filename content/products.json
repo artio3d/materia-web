@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "icon": "🛡",
+      "name": "ΜΟΝΩΤΙΚΑ",
+      "subcategories": [
+        {
+          "products": [
+            {
+              "color": "#0d1f3c",
+              "highlights": [
+                "Πλεονεκτήματα"
+              ],
+              "materials": [
+                "Γκάμα Υλικών "
+              ],
+              "name": "Εξωτερική Θερμοπρόσοψη (ETICS)",
+              "range": "Thermocover / Fibran",
+              "tag": "ETICS · ETAG 004",
+              "desc": "μια σύντομη πρόταση"
+            }
+          ],
+          "name": "ΘΕΡΜΟΜΟΝΩΣΗ"
+        }
+      ]
+    }
+  ]
+}
