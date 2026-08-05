@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATERIA — Premium Building Materials</title>
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="custom-cursor"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">MATER<span>I</span>A</a>
+  <ul class="nav-links">
+    <li><a href="#about" data-section="about">ΕΤΑΙΡΙΚΟ ΠΡΟΦΙΛ</a></li>
+    <li><a href="#" id="nav-products" data-overlay="products">ΠΡΟΪΟΝΤΑ</a></li>
+    <li><a href="#blog" data-section="blog">BLOG</a></li>
+    <li><a href="#careers" data-section="careers">ΚΑΡΙΕΡΑ</a></li>
+    <li><a href="#contact" data-section="contact">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+  </ul>
+  <div class="burger" id="mobile-burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <a href="#contact" class="nav-cta">REQUEST A QUOTE →</a>
+</nav>
+
+<!-- PRODUCT OVERLAY -->
+<div id="product-overlay" role="dialog" aria-label="Product Command Center">
+  <!-- Mobile Header -->
+  <div class="ov-mobile-nav">
+    <button id="ov-back-btn" class="ov-mobile-btn">←</button>
+    <div id="ov-mobile-title">ΚΑΤΗΓΟΡΙΕΣ</div>
+    <button id="ov-close-btn-mob" class="ov-mobile-btn">✕</button>
+  </div>
+
+  <!-- Desktop Close Button (κρύβεται στο κινητό) -->
+  <button class="ov-close" id="ov-close-btn" aria-label="Close">✕</button>
+  
+  <div class="overlay-inner">
+    <!-- ΣΤΗΛΗ 1: ΚΑΤΗΓΟΡΙΕΣ -->
+    <div class="ov-col-left" id="ov-col-cats">
+      <div class="ov-col-left-header">
+        <input type="text" class="ov-search" placeholder="Αναζήτηση..." id="ov-search" />
+      </div>
+      <div class="ov-cat-label">ΚΑΤΗΓΟΡΙΕΣ</div>
+      <div id="ov-cat-list"></div>
+    </div>
+
+    <!-- ΣΤΗΛΗ 2: ΠΡΟΪΟΝΤΑ -->
+    <div class="ov-col-center" id="ov-col-prods">
+      <div class="ov-center-top">
+        <div class="ov-center-cat-title" id="ov-active-cat-title">Επιλέξτε Κατηγορία</div>
+        <div class="ov-center-cat-count" id="ov-product-count"></div>
+      </div>
+      <div id="ov-products-pane"></div>
+    </div>
+
+    <!-- ΣΤΗΛΗ 3: ΛΕΠΤΟΜΕΡΕΙΕΣ -->
+    <div class="ov-col-right" id="ov-col-detail">
+      <div class="ov-detail-img" id="ov-detail-img-container">
+        <div id="ov-detail-img-inner"></div>
+      </div>
+      <div class="ov-detail-content" id="ov-detail-content"></div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="hero-accent-line"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">PREMIUM BUILDING MATERIALS — SINCE 1998</div>
+      <h1 class="hero-title">
+        <span class="hero-title-line">MATERIA</span>
+        <span class="hero-title-line outline-text" style="--stroke-color: var(--orange);">BUILDING</span>
+        <span class="hero-title-line outline-text">TOMORROW</span>
+      </h1>
+      <p class="hero-desc">Η ύλη στην πιο εξελιγμένη της μορφή. Προμηθεύουμε τα δομικά στοιχεία που ορίζουν τη σύγχρονη κατασκευή: από την ενεργειακή θωράκιση έως τις πιο απαιτητικές επιφάνειες..</p>
+      <div class="hero-actions">
+        <a href="#" class="btn-primary" id="hero-products-btn">ΕΞΕΡΕΥΝΗΣΗ ΠΡΟΪΟΝΤΩΝ</a>
+        <a href="#about" class="btn-ghost">ΕΤΑΙΡΙΚΟ ΠΡΟΦΙΛ</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+        <div class="hero-stat-item"><div class="hero-stat-num">850<span>+</span></div><div class="hero-stat-label">Προϊόντα</div></div>
+        <div class="hero-stat-item"><div class="hero-stat-num">120<span>+</span></div><div class="hero-stat-label">Brands</div></div>
+        <div class="hero-stat-item"><div class="hero-stat-num">26<span>yr</span></div><div class="hero-stat-label">Εμπειρία</div></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="glow-orb glow-orb-orange" style="width:500px;height:500px;top:50%;left:-100px;opacity:0.35;transform:translateY(-50%);"></div>
+    <div class="about-grid">
+      <div>
+        <div class="section-label" data-aos="fade-up">ΕΤΑΙΡΙΚΟ ΠΡΟΦΙΛ</div>
+        <h2 class="about-heading" data-aos="fade-up" data-aos-delay="100">Η ΦΙΛΟΣΟΦΙΑ<br>ΤΗΣ <em>ΑΡΙΣΤΕΙΑΣ</em></h2>
+        <p class="about-text" data-aos="fade-up" data-aos-delay="200">Η MATERIA ιδρύθηκε με έναν σκοπό: να φέρει στο ελληνικό κατασκευαστικό τοπίο υλικά που δεν απλά χτίζουν κτίρια, αλλά ορίζουν τον χώρο. Συνεργαζόμαστε αποκλειστικά με κορυφαίους οίκους της Ευρώπης και της Ασίας.</p>
+        <p class="about-text" data-aos="fade-up" data-aos-delay="280">Παρέχουμε πλήρη τεχνική υποστήριξη, δοκίμια υλικών και consultancy σε μηχανικούς, αρχιτέκτονες και κατασκευαστές.</p>
+        <div class="about-pillars" data-aos="fade-up" data-aos-delay="350">
+          <div class="pillar-card"><div class="pillar-num">01</div><div class="pillar-title">QUALITY</div><div class="pillar-desc">Μόνο πιστοποιημένα υλικά με ευρωπαϊκές προδιαγραφές CE & ISO.</div></div>
+          <div class="pillar-card"><div class="pillar-num">02</div><div class="pillar-title">INNOVATION</div><div class="pillar-desc">Υλικά νέας γενιάς: nano-τεχνολογία, βιοκλιματική σχεδίαση.</div></div>
+          <div class="pillar-card"><div class="pillar-num">03</div><div class="pillar-title">EXPERTISE</div><div class="pillar-desc">Ομάδα μηχανικών για πλήρη τεχνική υποστήριξη on-site.</div></div>
+          <div class="pillar-card"><div class="pillar-num">04</div><div class="pillar-title">NETWORK</div><div class="pillar-desc">120+ brands από 28 χώρες, αποκλειστική διανομή στην Ελλάδα.</div></div>
+        </div>
+      </div>
+      <div class="about-visual" data-aos="fade-left" data-aos-delay="200">
+        <div class="about-visual-inner">
+          <div class="about-visual-pattern"></div>
+          <div class="about-visual-text">MAT</div>
+          <div class="about-badge"><div class="about-badge-num">26</div><div class="about-badge-label">YEARS OF EXCELLENCE</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS TICKER -->
+  <section id="brands">
+    <div class="ticker-label">ΣΥΝΕΡΓΑΖΟΜΕΝΕΣ ΕΤΑΙΡΕΙΕΣ & BRANDS</div>
+    <div class="ticker-track-wrap"><div class="ticker-track" id="ticker-track"></div></div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog">
+    <div class="blog-header" data-aos="fade-up">
+      <div><div class="section-label">ΕΙΔΗΣΕΙΣ & ΑΡΘΡΑ</div><h2 class="section-heading">BLOG</h2></div>
+      <a href="#" class="btn-ghost" style="white-space:nowrap;">ΟΛΑ ΤΑ ΑΡΘΡΑ →</a>
+    </div>
+    <div class="blog-grid" id="blog-grid">
+      <!-- Τα άρθρα φορτώνονται δυναμικά από το /content/blog.json -->
+    </div>
+  </section>
+
+  <!-- CAREERS -->
+  <section id="careers">
+    <div class="glow-orb glow-orb-orange" style="width:400px;height:400px;bottom:-100px;right:-50px;opacity:0.25;"></div>
+    <div class="careers-grid">
+      <div>
+        <div class="section-label" data-aos="fade-up">ΚΑΡΙΕΡΑ</div>
+        <h2 class="about-heading" data-aos="fade-up" data-aos-delay="100">ΓΙΝΕ ΜΕΡΟΣ<br>ΤΗΣ <em>ΟΜΑΔΑΣ</em></h2>
+        <p class="about-text" id="careers-intro" data-aos="fade-up" data-aos-delay="200">Αναζητούμε ταλαντούχους επαγγελματίες που μοιράζονται το πάθος μας για την αριστεία στα δομικά υλικά.</p>
+        <div class="job-list" id="job-list" data-aos="fade-up" data-aos-delay="280">
+          <!-- Οι θέσεις εργασίας φορτώνονται δυναμικά από το /content/careers.json -->
+        </div>
+      </div>
+      <div class="careers-visual" data-aos="fade-left" data-aos-delay="200">
+        <div class="careers-big-num">∞</div>
+        <div class="careers-tagline">BUILD YOUR<br><em>CAREER</em><br>WITH US</div>
+        <p class="careers-sub">Ανταγωνιστικές αποδοχές, συνεχής εκπαίδευση, και η ευκαιρία να εργαστείς με τα κορυφαία δομικά υλικά της αγοράς.</p>
+        <div style="margin-top:32px;"><a href="#contact" class="btn-primary">ΑΠΟΣΤΟΛΗ CV →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="glow-orb glow-orb-blue" style="width:500px;height:500px;top:50%;right:-100px;opacity:0.3;transform:translateY(-50%);"></div>
+    <div style="margin-bottom:64px;" data-aos="fade-up"><div class="section-label">ΕΠΙΚΟΙΝΩΝΙΑ</div><h2 class="section-heading">ΕΛΑTE ΣΕ ΕΠΑΦΗ</h2></div>
+    <div class="contact-grid">
+      <div class="contact-form-wrap" data-aos="fade-right">
+        <div class="section-label" style="margin-bottom:28px;">ΦΟΡΜΑ ΕΠΙΚΟΙΝΩΝΙΑΣ</div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">ΟΝΟΜΑ</label><input type="text" class="form-input" placeholder="Ονοματεπώνυμο"></div>
+          <div class="form-group"><label class="form-label">ΕΤΑΙΡΕΙΑ</label><input type="text" class="form-input" placeholder="Εταιρεία"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">EMAIL</label><input type="email" class="form-input" placeholder="email@example.com"></div>
+          <div class="form-group"><label class="form-label">ΤΗΛΕΦΩΝΟ</label><input type="tel" class="form-input" placeholder="+30 210..."></div>
+        </div>
+        <div class="form-group"><label class="form-label">ΜΗΝΥΜΑ</label><textarea class="form-textarea" placeholder="Περιγράψτε τις ανάγκες του έργου σας..."></textarea></div>
+        <button class="btn-primary" style="width:100%;padding:18px;font-size:0.62rem;cursor:none;border:none;">ΑΠΟΣΤΟΛΗ ΑΙΤΗΜΑΤΟΣ →</button>
+      </div>
+      <div class="contact-info" data-aos="fade-left" data-aos-delay="150">
+        <h3 class="contact-info-heading">ΣΗΜΕΙΑ<br><em>ΕΞΥΠΗΡΕΤΗΣΗΣ</em></h3>
+        
+        <div class="contact-detail-list">
+            <div class="contact-detail">
+            <div class="contact-detail-icon">✉</div>
+            <div class="contact-detail-text">
+                <div class="contact-detail-type">EMAIL</div>
+                <div class="contact-detail-val" id="contact-email">info@materia.gr</div>
+            </div>
+            </div>
+        </div>
+
+        <!-- THESSALONIKI LOCATIONS GRID -->
+        <div style="display: grid; gap: 15px; margin-top: 25px;" id="locations-list">
+            <!-- Τα σημεία εξυπηρέτησης φορτώνονται δυναμικά από το /content/locations.json -->
+        </div>
+        </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-brand-name">MAT<span>E</span>RIA</div><div class="footer-tagline">Προηγμένα δομικά υλικά για αρχιτέκτονες, μηχανικούς και κατασκευαστές που αρνούνται να συμβιβαστούν.</div></div>
+    <div><div class="footer-col-title">ΠΡΟΪΟΝΤΑ</div><ul class="footer-links"><li><a href="#">Μονωτικά</a></li><li><a href="#">Επιφάνειες</a></li><li><a href="#">Στεγανοποίηση</a></li><li><a href="#">Τεχνικές Χρωματιές</a></li><li><a href="#">Δάπεδα</a></li></ul></div>
+    <div><div class="footer-col-title">ΕΤΑΙΡΕΙΑ</div><ul class="footer-links"><li><a href="#about">Εταιρικό Προφίλ</a></li><li><a href="#blog">Blog</a></li><li><a href="#careers">Καριέρα</a></li><li><a href="#contact">Επικοινωνία</a></li></ul></div>
+    <div><div class="footer-col-title">ΣΥΝΔΕΣΜΟΙ</div><ul class="footer-links"><li><a href="#">LinkedIn</a></li><li><a href="#">Instagram</a></li><li><a href="#">Issuu Catalogue</a></li><li><a href="#">Πολιτική Απορρήτου</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 MATERIA. Όλα τα δικαιώματα διατηρούνται.</span><span>Designed with precision.</span></div>
+</footer>
+
+<!-- SCRIPTS (ΣΗΜΑΝΤΙΚΗ ΣΕΙΡΑ) -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="main.js"></script> <!-- Το περιεχόμενο φορτώνεται πλέον με fetch() από /content/*.json -->
+
+<!-- Netlify Identity: χρειάζεται στην αρχική σελίδα για τα invite/recovery links της διαχειρίστριας -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
